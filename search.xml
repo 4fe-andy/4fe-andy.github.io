@@ -13,10 +13,20 @@
       
       <categories>
           
-          <category> Note，Chemistry </category>
+          <category> Note </category>
+          
+          <category> Chemistry </category>
+          
+          <category> IGCSE </category>
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> IGCSE </tag>
+            
+        </tags>
       
     </entry>
     
