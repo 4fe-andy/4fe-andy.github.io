@@ -11,7 +11,7 @@
   
   <title>
     
-      archive_a: 2023 
+      DecisionApp开发日志 
       
       
       |
@@ -106,84 +106,141 @@
 
 
       <div class="flex-container">
-        <!-- 归档页，展示本站所有文章，按照年份降序归类，url形式：https://yoursite/archives/ -->
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
-<!-- last: 按年份把文章分组，当前遍历到的年份 -->
-<!-- now: 当前遍历到的文章的发布年份 -->
 
-<div class="container archives">
-  <div class="post-list">
-    
-        <!-- 后续文章的发布年份呈现 -->
-        <div class="content-title">
-          <h2>
-            <span>2024</span>
-          </h2>
+  <!-- LaTex Display -->
+
+  
+    <script async type="text/javascript" src="/plugins/mathjax/tex-chtml.js"></script>
+  
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    }
+  </script>
+
+
+
+
+
+  <!-- clipboard -->
+
+  
+    <script async type="text/javascript" src="/plugins/clipboard.min.js"></script>
+  
+  
+<script src="/js/codeCopy.js"></script>
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">DecisionApp开发日志</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
+          2024-01-11 23:05:24
+        </span>
+        
+              <span class="post-tags">
+                <i class="iconfont icon-tags mr-10" title="标签"></i>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/Coding/" title="Coding">
+                    #Coding
+                  </a>
+                </span>
+                
+              </span>
+          
+      </div>
+      <div class="markdown-body">
+        <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>一款帮助用户下决定的App。App能够通过用户添加做与不做的理由，并给这些理由分别设置权重，计算出最终的决定到底是做与不做。</p>
+<h2 id="产品思想"><a href="#产品思想" class="headerlink" title="产品思想"></a>产品思想</h2>
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+              <a href="/2023/12/28/CQ%20IG%20P%20U1/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>上一页</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
+              2024-01-11 23:05:24
+            </span>
+            
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags mr-10" title="标签"></i>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/Coding/" title="Coding">
+                        #Coding
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+          </div>
+          <div class="post-foot-prev">
+            
+          </div>
         </div>
       
-      <div class="post-item" title="DecisionApp开发日志">
-        <div class="time-m-d">01-11</div>
-        <div class="title">
-          <a href="/2024/01/11/DecisionAppPlan/">
-            <span>DecisionApp开发日志</span>
-          </a>
-        </div>
-      </div>
+    </div>
     
-        <!-- 后续文章的发布年份呈现 -->
-        <div class="content-title">
-          <h2>
-            <span>2023</span>
-          </h2>
-        </div>
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">目录</div>
+    <div class="catalog-content">
       
-      <div class="post-item" title="Concept Questions Of IGCSE Physics UNIT1">
-        <div class="time-m-d">12-28</div>
-        <div class="title">
-          <a href="/2023/12/28/CQ%20IG%20P%20U1/">
-            <span>Concept Questions Of IGCSE Physics UNIT1</span>
-          </a>
-        </div>
-      </div>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-text">简介</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%A7%E5%93%81%E6%80%9D%E6%83%B3"><span class="toc-text">产品思想</span></a></li></ol></li></ol>
+      
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
+
     
-      <div class="post-item" title="Welcome!">
-        <div class="time-m-d">12-27</div>
-        <div class="title">
-          <a href="/2023/12/27/Welcome/">
-            <span>Welcome!</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="Description Questions Of IGCSE Physics UNIT1">
-        <div class="time-m-d">12-27</div>
-        <div class="title">
-          <a href="/2023/12/27/DQ%20IG%20P%20U1/">
-            <span>Description Questions Of IGCSE Physics UNIT1</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="UNIT1 Principles Of Chemistry">
-        <div class="time-m-d">11-28</div>
-        <div class="title">
-          <a href="/2023/11/28/IG%20C%20UNIT1/">
-            <span>UNIT1 Principles Of Chemistry</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="从零开始零成本搭建个人网站">
-        <div class="time-m-d">03-19</div>
-        <div class="title">
-          <a href="/2023/03/19/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E9%9B%B6%E6%88%90%E6%9C%AC%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/">
-            <span>从零开始零成本搭建个人网站</span>
-          </a>
-        </div>
+      <div class="comments-container">
+        
+
+
+
+
+
+
+
       </div>
     
   </div>
-</div>
+
 
         
 <div class="footer">
@@ -440,6 +497,24 @@
 
 
         
+  
+    <div class="share-icon tools-bar-item">
+      <a href="javascript: void(0)" id="share-icon">
+        <i class="iconfont iconshare"></i>
+      </a>
+      <div class="share-content hidden">
+        
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + DecisionApp%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97 + '&url=' + http%3A%2F%2Fexample.com%2F2024%2F01%2F11%2FDecisionAppPlan%2F + '" target="_blank" title="Twitter">
+            <i class="iconfont icon-twitter"></i>
+          </a>
+        
+        
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=http://example.com/2024/01/11/DecisionAppPlan/" target="_blank" title="Facebook">
+            <i class="iconfont icon-facebooksquare"></i>
+          </a>
+        
+      </div>
+    </div>
   
   
 <script src="/js/shares.js"></script>

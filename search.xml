@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>DecisionApp开发日志</title>
+      <link href="/2024/01/11/DecisionAppPlan/"/>
+      <url>/2024/01/11/DecisionAppPlan/</url>
+      
+        <content type="html"><![CDATA[<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>一款帮助用户下决定的App。App能够通过用户添加做与不做的理由，并给这些理由分别设置权重，计算出最终的决定到底是做与不做。</p><h2 id="产品思想"><a href="#产品思想" class="headerlink" title="产品思想"></a>产品思想</h2>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Coding </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Concept Questions Of IGCSE Physics UNIT1</title>
       <link href="/2023/12/28/CQ%20IG%20P%20U1/"/>
       <url>/2023/12/28/CQ%20IG%20P%20U1/</url>
