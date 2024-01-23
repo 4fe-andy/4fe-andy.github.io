@@ -4,6 +4,29 @@
   
     
     <entry>
+      <title>刷USACO铜组题的一点感想</title>
+      <link href="/2024/01/23/%E5%88%B7USACO%E9%93%9C%E7%BB%84%E9%A2%98%E7%9A%84%E4%B8%80%E7%82%B9%E6%84%9F%E6%83%B3/"/>
+      <url>/2024/01/23/%E5%88%B7USACO%E9%93%9C%E7%BB%84%E9%A2%98%E7%9A%84%E4%B8%80%E7%82%B9%E6%84%9F%E6%83%B3/</url>
+      
+        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近在准备USACO铜组的竞赛。我发现铜组的题目虽然说运用的算法非常单一，但是能想到正确、高效的解题思路对我来说是很难的。很多时候我觉得想到了一种比较简单粗暴的思路，实际写起来发现又行不通了。写了一大长串代码，去OJ的时候发现只有一个测试数据能过是经常在我身上发生的事情。所以我觉得我需要在解题方法上做一些总结和改进。</p><h2 id="思路为主，代码为辅"><a href="#思路为主，代码为辅" class="headerlink" title="思路为主，代码为辅"></a>思路为主，代码为辅</h2><p>‘’’<br>#include <iostream><br>#include <vector><br>using namespace std;</p><p>int n;<br>vector<int> cow;</p><p>int group(int odd, int even){<br>    int d &#x3D; odd - even;<br>    if (d &#x3D;&#x3D; 0) {<br>        return odd + even;<br>    } else if (d &#x3D;&#x3D; 1){<br>        return odd + even - 2;<br>    } else if (d &#x3D;&#x3D; 2){<br>        return odd + even - 1   ;<br>    } else{<br>        odd -&#x3D; 2;<br>        even +&#x3D; 1;<br>    }<br>    return group(odd, even);<br>}</p><p>int main() {<br>    cin &gt;&gt; n;</p><pre><code>int even = 0, odd = 0;for (int i = 0; i &lt; n; i++) &#123;    int a;    cin &gt;&gt; a;    if (a % 2 == 0) &#123;        even++;    &#125;else&#123;        odd++;    &#125;&#125;if (even &gt; odd) &#123;    cout &lt;&lt; 2 * odd + 1 &lt;&lt; endl;&#125;else&#123;    cout &lt;&lt; group(odd,even) &lt;&lt; endl;&#125;return 0;</code></pre><p>}<br>‘’’</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Coding </tag>
+            
+            <tag> USACO </tag>
+            
+            <tag> 算法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>DecisionApp开发日志</title>
       <link href="/2024/01/11/DecisionAppPlan/"/>
       <url>/2024/01/11/DecisionAppPlan/</url>
