@@ -8,7 +8,7 @@
       <link href="/2024/01/11/DecisionAppPlan/"/>
       <url>/2024/01/11/DecisionAppPlan/</url>
       
-        <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>一款专注于跟踪和记录任务时长和截止时间的App，获得了mergeek.com社区的推荐。</p><h2 id="功能概述"><a href="#功能概述" class="headerlink" title="功能概述"></a>功能概述</h2><p>App能够通过用户添加附有截止日期和计划所需时间的待办事项，使用进度块直观地展示任务体量和Deadline之间的关系。并且App可以将所有任务进行量化统计，让用户的行动更加可视化。</p><h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2><ul><li>基础UI搭建 ✔️ 2024&#x2F;1&#x2F;20</li><li>基础功能搭建 ✔️ 2024&#x2F;2&#x2F;10</li><li>提醒事项同步 ✔️ 2024&#x2F;2&#x2F;13</li><li>全局搜索 ✔️ 2024&#x2F;2&#x2F;14</li><li>UI风格美化 ✔️ 2024&#x2F;2&#x2F;17</li><li>优化效率分数算法 ✔️ 2024&#x2F;2&#x2F;17</li><li>用户设置持久化 ✔️ 2024&#x2F;2&#x2F;18</li><li>紧急提醒 ✔️ 2024&#x2F;2&#x2F;20</li><li>任务计时 ✔️ 2024&#x2F;2&#x2F;24</li><li>支持繁体中文和英文 ✔️ 2024&#x2F;2&#x2F;25</li><li>重复任务 ✔️ 2024&#x2F;3&#x2F;02</li><li>设置开始日期 ✔️ 2024&#x2F;3&#x2F;04</li><li>每日任务小组件 ✔️ 2024&#x2F;3&#x2F;25</li></ul>]]></content>
+        <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>一款专注于跟踪和记录任务时长和截止时间的App，获得了mergeek.com社区的推荐。</p><h2 id="功能概述"><a href="#功能概述" class="headerlink" title="功能概述"></a>功能概述</h2><p>App能够通过用户添加附有截止日期和计划所需时间的待办事项，使用进度块直观地展示任务体量和Deadline之间的关系。并且App可以将所有任务进行量化统计，让用户的行动更加可视化。</p><h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2><ul><li>基础UI搭建 ✔️ 2024&#x2F;1&#x2F;20</li><li>基础功能搭建 ✔️ 2024&#x2F;2&#x2F;10</li><li>提醒事项同步 ✔️ 2024&#x2F;2&#x2F;13</li><li>全局搜索 ✔️ 2024&#x2F;2&#x2F;14</li><li>UI风格美化 ✔️ 2024&#x2F;2&#x2F;17</li><li>优化效率分数算法 ✔️ 2024&#x2F;2&#x2F;17</li><li>用户设置持久化 ✔️ 2024&#x2F;2&#x2F;18</li><li>紧急提醒 ✔️ 2024&#x2F;2&#x2F;20</li><li>任务计时 ✔️ 2024&#x2F;2&#x2F;24</li><li>支持繁体中文和英文 ✔️ 2024&#x2F;2&#x2F;25</li><li>重复任务 ✔️ 2024&#x2F;3&#x2F;02</li><li>设置开始日期 ✔️ 2024&#x2F;3&#x2F;04</li><li>每日任务小组件 ✔️ 2024&#x2F;3&#x2F;25</li><li>暗黑模式 ✔️ 2024&#x2F;4&#x2F;17</li><li>日历双向同步 ✔️ 2024&#x2F;5&#x2F;10</li><li>提醒事项双向同步 ✔️ 2024&#x2F;5&#x2F;15</li><li>重制App图标 ✔️ 2024&#x2F;5&#x2F;23</li><li>自定义任务完成时间 ✔️ 2024&#x2F;7&#x2F;10</li><li>更多尺寸的小组件 ✔️ 2024&#x2F;7&#x2F;20</li><li>自定义完成时长</li><li>预计时间和实际时间差值统计</li><li>使用引导</li><li>重新设计已完成任务UI</li></ul>]]></content>
       
       
       
@@ -17,25 +17,6 @@
             <tag> Coding </tag>
             
             <tag> Projects </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Welcome!</title>
-      <link href="/2023/12/27/Welcome/"/>
-      <url>/2023/12/27/Welcome/</url>
-      
-        <content type="html"><![CDATA[<h2 id="欢迎！"><a href="#欢迎！" class="headerlink" title="欢迎！"></a>欢迎！</h2><p>欢迎来到我的博客！<br>你可以在这里看到以下内容，包括但不限于：  </p><ul><li>学习笔记  </li><li>随笔  </li><li>教程攻略</li></ul><h2 id="食用姿势"><a href="#食用姿势" class="headerlink" title="食用姿势"></a>食用姿势</h2><p>右下角月亮&#x2F;小太阳图标可以切换黑白主题，点击搜索图标可以对博客进行任意字符的全局搜索，网站也支持Twitter和Facebook的分享。在浏览博文时右侧可以看到文章大纲，点击标题可以即刻跳转至你想浏览的位置。</p><p>推荐使用平板或者电脑访问。</p><h2 id="我的摄影站点"><a href="#我的摄影站点" class="headerlink" title="我的摄影站点"></a>我的摄影站点</h2><p>也欢迎访问我的另外一个网站：<a href="https://zs-andy.github.io/">https://zs-andy.github.io</a><br>我的摄影作品和相关的文字记录将会展示在这个站点里。</p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> Welcome </tag>
             
         </tags>
       
@@ -61,6 +42,25 @@
           
       </categories>
       
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Welcome!</title>
+      <link href="/2023/12/27/Welcome/"/>
+      <url>/2023/12/27/Welcome/</url>
+      
+        <content type="html"><![CDATA[<h2 id="欢迎！"><a href="#欢迎！" class="headerlink" title="欢迎！"></a>欢迎！</h2><p>欢迎来到我的博客！<br>你可以在这里看到以下内容，包括但不限于：  </p><ul><li>学习笔记  </li><li>随笔  </li><li>教程攻略</li></ul><h2 id="食用姿势"><a href="#食用姿势" class="headerlink" title="食用姿势"></a>食用姿势</h2><p>右下角月亮&#x2F;小太阳图标可以切换黑白主题，点击搜索图标可以对博客进行任意字符的全局搜索，网站也支持Twitter和Facebook的分享。在浏览博文时右侧可以看到文章大纲，点击标题可以即刻跳转至你想浏览的位置。</p><p>推荐使用平板或者电脑访问。</p><h2 id="我的摄影站点"><a href="#我的摄影站点" class="headerlink" title="我的摄影站点"></a>我的摄影站点</h2><p>也欢迎访问我的另外一个网站：<a href="https://zs-andy.github.io/">https://zs-andy.github.io</a><br>我的摄影作品和相关的文字记录将会展示在这个站点里。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Welcome </tag>
+            
+        </tags>
       
     </entry>
     
