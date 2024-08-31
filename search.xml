@@ -4,34 +4,11 @@
   
     
     <entry>
-      <title>刷USACO铜组题的一点感想</title>
-      <link href="/2024/01/23/%E5%88%B7USACO%E9%93%9C%E7%BB%84%E9%A2%98%E7%9A%84%E4%B8%80%E7%82%B9%E6%84%9F%E6%83%B3/"/>
-      <url>/2024/01/23/%E5%88%B7USACO%E9%93%9C%E7%BB%84%E9%A2%98%E7%9A%84%E4%B8%80%E7%82%B9%E6%84%9F%E6%83%B3/</url>
-      
-        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近在自学准备USACO铜组的竞赛。我发现铜组的题目虽然说运用的算法非常单一，但是能想到正确、高效的解题思路对我来说是很难的。很多时候我觉得想到了一种比较简单粗暴的思路，实际写起来发现又行不通了。写了一大长串代码，去OJ的时候发现只有一个测试数据能过是经常在我身上发生的事情。所以我觉得我需要在解题方法上做一些总结和改进。</p><h2 id="思路为主，代码为辅"><a href="#思路为主，代码为辅" class="headerlink" title="思路为主，代码为辅"></a>思路为主，代码为辅</h2><p>USACO的很多题目并不需要很复杂的代码和算法（铜组），但是运用的方法十分巧妙。</p><h3 id="不要试图让程序代替思考"><a href="#不要试图让程序代替思考" class="headerlink" title="不要试图让程序代替思考"></a>不要试图让程序代替思考</h3><p>经常做题的时候，我只会想到一些比较暴力的解法。暴力解法的特点就是自己思考的过程少，而代码的时间复杂度高。这是在做竞赛题极力要避免的。因为，暴力解法通常不管用，并且时常会让自己无法很好的理解代码运行的细节。暴力解法的运行步骤多，特殊情况多，让所有的主动权交给了计算机，自己没有思考题目的过程，人脑通常也无法处理暴力解法当中的一些小问题，除非这道题很适合使用暴力的方法。</p><h3 id="保留有效信息，去除无效信息"><a href="#保留有效信息，去除无效信息" class="headerlink" title="保留有效信息，去除无效信息"></a>保留有效信息，去除无效信息</h3><p>在题目的数据集中经常有大量信息，但是很多其实是无效的，只有很少部分的信息是实际能用得上的。  </p><p>例如 <strong>USACO Bronze 2021 January - Even More Odd Photos</strong> 题目中，如果只是单纯地输入数组，然后来判断奇偶，然后用递归去组合，得出组合的个数是行不通或者很难行通的。但是如果我们在一开始就把实际值忽略，只保留偶数个数和奇数个数。我们不需要具体的数字和每个数字在列表中的位置，因为这些信息是无效的，那么我们就不需要运用到数组，只需要两个变量存储奇数个数和偶数个数就可以了。</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line">vector&lt;<span class="type">int</span>&gt; cow;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">group</span><span class="params">(<span class="type">int</span> odd, <span class="type">int</span> even)</span></span>&#123;</span><br><span class="line">  <span class="type">int</span> d = odd - even;</span><br><span class="line">  <span class="keyword">if</span> (d == <span class="number">0</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> odd + even;</span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (d == <span class="number">1</span>)&#123;</span><br><span class="line">      <span class="keyword">return</span> odd + even - <span class="number">2</span>;</span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (d == <span class="number">2</span>)&#123;</span><br><span class="line">      <span class="keyword">return</span> odd + even - <span class="number">1</span>   ;</span><br><span class="line">  &#125; <span class="keyword">else</span>&#123;</span><br><span class="line">      odd -= <span class="number">2</span>;</span><br><span class="line">      even += <span class="number">1</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">group</span>(odd, even);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  cin &gt;&gt; n;</span><br><span class="line">  </span><br><span class="line">  <span class="type">int</span> even = <span class="number">0</span>, odd = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">      <span class="type">int</span> a;</span><br><span class="line">      cin &gt;&gt; a;</span><br><span class="line">      <span class="keyword">if</span> (a % <span class="number">2</span> == <span class="number">0</span>) &#123;</span><br><span class="line">          even++;</span><br><span class="line">      &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">          odd++;</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> (even &gt; odd) &#123;</span><br><span class="line">      cout &lt;&lt; <span class="number">2</span> * odd + <span class="number">1</span> &lt;&lt; endl;</span><br><span class="line">  &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">      cout &lt;&lt; <span class="built_in">group</span>(odd,even) &lt;&lt; endl;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="如何改进"><a href="#如何改进" class="headerlink" title="如何改进"></a>如何改进</h2><p>最重要的是在拿到题目之后先不要着急写代码，而是仔细读题，观察题目的数据，从中提取有效的信息，以及判断有哪些坑藏在题目当中。然后拿一支笔和一张纸，花至少一半的时间构思解题的思路。比如一道题分配一个小时，那么最好拿半个小时来构思思路。因为铜组的题目的思路往往简单而又巧妙，用纸笔就可以推算出来。如果觉得人脑难以处理这样的数据和步骤，那么一定是方法错了，那就换一个思路进行推进。</p><p><strong>END</strong></p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> Coding </tag>
-            
-            <tag> USACO </tag>
-            
-            <tag> 算法 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>DecisionApp开发日志</title>
+      <title>DeadLineTodo开发日志</title>
       <link href="/2024/01/11/DecisionAppPlan/"/>
       <url>/2024/01/11/DecisionAppPlan/</url>
       
-        <content type="html"><![CDATA[<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>本项目暂时停工</p><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>一款帮助用户下决定的App。</p><h2 id="功能概述（展望）"><a href="#功能概述（展望）" class="headerlink" title="功能概述（展望）"></a>功能概述（展望）</h2><p>App能够通过用户添加做与不做的理由，并给这些理由分别设置权重，计算出最终的决定到底是做与不做。如果该决定是要去做的决定，可以给每个决定添加日期和执行决定的时间段，在这段时间内完成执行后可以给决定打勾。支持分析每个决定的犹豫指数，添加感想，分享图片等功能。</p><h2 id="开发进程"><a href="#开发进程" class="headerlink" title="开发进程"></a>开发进程</h2><ul><li>基础UI搭建 ✔️ 2024&#x2F;1&#x2F;4</li><li>基本添加&#x2F;编辑操作 ✔️ 2024&#x2F;1&#x2F;7</li><li>UI风格美化 ✔️ 2024&#x2F;1&#x2F;10</li><li>色卡选择 ✔️ 2024&#x2F;1&#x2F;11</li><li>决定结果展示 ✔️ 2024&#x2F;1&#x2F;11</li><li>添加日期 ✔️ 2024&#x2F;1&#x2F;13</li><li>分析坚定指数 ✔️ 2024&#x2F;1&#x2F;13</li><li>选择删除 ✔️ 2024&#x2F;1&#x2F;13</li><li>随机选择</li><li>分类</li><li>筛选功能</li><li>全局搜索</li><li>CoreData</li><li>暗黑模式</li><li>添加感想</li><li>分享图片</li></ul>]]></content>
+        <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>一款专注于跟踪和记录任务时长和截止时间的App。</p><h2 id="功能概述（展望）"><a href="#功能概述（展望）" class="headerlink" title="功能概述（展望）"></a>功能概述（展望）</h2><p>App能够通过用户添加做与不做的理由，并给这些理由分别设置权重，计算出最终的决定到底是做与不做。如果该决定是要去做的决定，可以给每个决定添加日期和执行决定的时间段，在这段时间内完成执行后可以给决定打勾。支持分析每个决定的犹豫指数，添加感想，分享图片等功能。</p><h2 id="开发进程"><a href="#开发进程" class="headerlink" title="开发进程"></a>开发进程</h2><ul><li>基础UI搭建 ✔️ 2024&#x2F;1&#x2F;4</li><li>基本添加&#x2F;编辑操作 ✔️ 2024&#x2F;1&#x2F;7</li><li>UI风格美化 ✔️ 2024&#x2F;1&#x2F;10</li><li>色卡选择 ✔️ 2024&#x2F;1&#x2F;11</li><li>决定结果展示 ✔️ 2024&#x2F;1&#x2F;11</li><li>添加日期 ✔️ 2024&#x2F;1&#x2F;13</li><li>分析坚定指数 ✔️ 2024&#x2F;1&#x2F;13</li><li>选择删除 ✔️ 2024&#x2F;1&#x2F;13</li><li>随机选择</li><li>分类</li><li>筛选功能</li><li>全局搜索</li><li>CoreData</li><li>暗黑模式</li><li>添加感想</li><li>分享图片</li></ul>]]></content>
       
       
       
@@ -40,29 +17,6 @@
             <tag> Coding </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Concept Questions Of IGCSE Physics UNIT1</title>
-      <link href="/2023/12/28/CQ%20IG%20P%20U1/"/>
-      <url>/2023/12/28/CQ%20IG%20P%20U1/</url>
-      
-        <content type="html"><![CDATA[<p>你觉得我会更新吗🤪</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Notes </category>
-          
-          <category> IGCSE </category>
-          
-          <category> Physics </category>
-          
-      </categories>
-      
       
     </entry>
     
