@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN" color-mode="light">
+<html lang="en-US" color-mode="light">
 
   <head>
   <meta charset="utf-8">
@@ -158,12 +158,12 @@
       <div class="post-title">Photo-Based Question Bank Search Using Vision Models</div>
       <div class="post-attach">
         <span class="post-pubtime">
-          <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
+          <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
           2024-08-31 16:23:55
         </span>
         
               <span class="post-tags">
-                <i class="iconfont icon-tags mr-10" title="标签"></i>
+                <i class="iconfont icon-tags mr-10" title="Tags"></i>
                 
                 <span class="span--tag mr-8">
                   <a href="/tags/Coding/" title="Coding">
@@ -195,18 +195,18 @@
             
               <a href="/2024/01/18/DecisionAppPlan/" target="_self">
                 <i class="iconfont icon-chevronleft"></i>
-                <span>上一页</span>
+                <span>Prev</span>
               </a>
             
           </div>
           <div class="post-attach">
             <span class="post-pubtime">
-              <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
+              <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
               2024-08-31 16:23:55
             </span>
             
                   <span class="post-tags">
-                    <i class="iconfont icon-tags mr-10" title="标签"></i>
+                    <i class="iconfont icon-tags mr-10" title="Tags"></i>
                     
                     <span class="span--tag mr-8">
                       <a href="/tags/Coding/" title="Coding">
@@ -367,7 +367,7 @@
       'use strict';
       var $input = document.getElementById(search_id);
       var $resultContent = document.getElementById(content_id);
-      $resultContent.innerHTML = "<ul><span class='local-search-empty'>首次搜索，正在载入索引文件，请稍后……<span></ul>";
+      $resultContent.innerHTML = "<ul><span class='local-search-empty'>First search, index file loading, please wait...<span></ul>";
       $.ajax({
         // 0x01. load xml file
         url: path,
@@ -463,7 +463,7 @@
             });
             str += "</ul>";
             if (str.indexOf('<li>') === -1) {
-              return $resultContent.innerHTML = "<ul><span class='local-search-empty'>没有找到内容，请尝试更换检索词。<span></ul>";
+              return $resultContent.innerHTML = "<ul><span class='local-search-empty'>No result<span></ul>";
             }
             $resultContent.innerHTML = str;
           });
@@ -471,9 +471,9 @@
         error: function(xhr, status, error) {
           $resultContent.innerHTML = ""
           if (xhr.status === 404) {
-            $resultContent.innerHTML = "<ul><span class='local-search-empty'>未找到search.xml文件，具体请参考：<a href='https://github.com/zchengsite/hexo-theme-oranges#configuration' target='_black'>configuration</a><span></ul>";
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>The search.xml file was not found, please refer to：<a href='https://github.com/zchengsite/hexo-theme-oranges#configuration' target='_black'>configuration</a><span></ul>";
           } else {
-            $resultContent.innerHTML = "<ul><span class='local-search-empty'>请求失败，尝试重新刷新页面或稍后重试。<span></ul>";
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>The request failed, Try to refresh the page or try again later.<span></ul>";
           }
         }
       });
