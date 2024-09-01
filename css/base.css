@@ -22,7 +22,7 @@ body.hidden {
   line-height: 0.5;
   color: #24292e;
   font-size: 1.6rem;
-  line-height: 1;
+  line-height: 0.5;
   word-wrap: break-word;
   color: var(--color-text-md-content)
 }
