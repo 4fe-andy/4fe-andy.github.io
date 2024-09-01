@@ -8,7 +8,7 @@
   border-width: 1px 0;
   overflow: auto;
   color: #ccc;
-  line-height: 22.400000000000002px
+  line-height: 1.6
 }
 
 .article-entry .highlight .gutter pre,
@@ -1084,7 +1084,6 @@ body.hidden {
 .markdown-body {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  line-height: 0.8;
   color: #24292e;
   font-size: 1.6rem;
   line-height: 1.6;
