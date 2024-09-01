@@ -1,7 +1,7 @@
 .article-entry pre,
 .article-entry .highlight {
-  background: #2d2d2d;
-  margin: 0 -20px;
+  background: #858585;
+  padding: 15px 20px;
   border-style: solid;
   border-color: color-border;
   border-width: 1px 0;
