@@ -8,7 +8,7 @@
   border-width: 1px 0;
   overflow: auto;
   color: #ccc;
-  line-height: 1
+  line-height: 0.5
 }
 
 .article-entry .highlight .gutter pre,
