@@ -190,7 +190,7 @@ pre .coffeescript .title {
 
 pre .keyword,
 pre .javascript .function {
-  color: rgb(153, 179, 204)
+  color: #c9c
 }
 
 .markdown-body .highlight {
