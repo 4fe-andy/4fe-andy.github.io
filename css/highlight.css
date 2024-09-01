@@ -1,13 +1,14 @@
 .article-entry pre,
 .article-entry .highlight {
-  background: #858585;
+  background: #2d2d2d;
+  margin: 0 -20px;
   padding: 15px 20px;
   border-style: solid;
   border-color: color-border;
   border-width: 1px 0;
   overflow: auto;
   color: #ccc;
-  line-height: 0px 
+  line-height: 22px 
 }
 
 .article-entry .highlight .gutter pre,
