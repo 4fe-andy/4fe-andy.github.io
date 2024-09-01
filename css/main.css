@@ -27,12 +27,14 @@
 .article-entry code {
   background: color-background;
   text-shadow: 0 1px #fff;
-  padding: 0 .3em
+  padding: 0 .3em;
+  line-height: 1
 }
 
 .article-entry pre code {
   background: none;
   text-shadow: none;
+  line-height: 1;
   padding: 0
 }
 
