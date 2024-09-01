@@ -8,33 +8,29 @@
   border-width: 1px 0;
   overflow: auto;
   color: #ccc;
-  line-height: 1.6
+  line-height: 15px 
 }
 
 .article-entry .highlight .gutter pre,
 .article-entry .gist .gist-file .gist-data .line-numbers {
   color: #666;
-  font-size: .85em;
-  line-height: 1.6
+  font-size: .85em
 }
 
 .article-entry pre,
 .article-entry code {
-  font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
-  line-height: 1.6
+  font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace
 }
 
 .article-entry code {
   background: color-background;
   text-shadow: 0 1px #fff;
-  padding: 0 .3em;
-  line-height: 1.6
+  padding: 0 .3em
 }
 
 .article-entry pre code {
   background: none;
   text-shadow: none;
-  line-height: 1.6;
   padding: 0
 }
 
@@ -222,7 +218,6 @@ pre .javascript .function {
   padding-left: 10px;
   padding-right: 10px;
   background-color: #2d2d2d !important;
-  line-height: 1.6
 }
 
 .markdown-body .highlight table tbody pre {
