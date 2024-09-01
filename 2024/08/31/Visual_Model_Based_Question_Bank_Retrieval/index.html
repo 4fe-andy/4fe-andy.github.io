@@ -267,7 +267,7 @@ mjx-container[display="true"] + br {
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-          2024-09-01 14:12:50
+          2024-09-01 14:29:17
         </span>
         
               <span class="post-categories">
@@ -322,6 +322,8 @@ mjx-container[display="true"] + br {
 <figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@State</span> <span class="keyword">private</span> <span class="keyword">var</span> <span class="attr">recognizedText</span>: <span class="title class_">String</span> = <span class="string">"No text recognized"</span></span><br></pre></td></tr></table></figure>
 <p>然后在ContentView结构体内编写识别文字的函数：</p>
 <figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">func</span> <span class="title function_">recognizeText</span>() {</span><br><span class="line">    <span class="keyword">guard</span> <span class="keyword">let</span> image <span class="operator">=</span> image<span class="operator">?</span>.cgImage <span class="keyword">else</span> { <span class="keyword">return</span> }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> requestHandler <span class="operator">=</span> <span class="type">VNImageRequestHandler</span>(cgImage: image, options: [:])</span><br><span class="line">    <span class="keyword">let</span> request <span class="operator">=</span> <span class="type">VNRecognizeTextRequest</span> { (request, error) <span class="keyword">in</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">let</span> observations <span class="operator">=</span> request.results <span class="keyword">as?</span> [<span class="type">VNRecognizedTextObservation</span>] {</span><br><span class="line">            <span class="keyword">let</span> recognizedStrings <span class="operator">=</span> observations.compactMap { <span class="variable">$0</span>.topCandidates(<span class="number">1</span>).first<span class="operator">?</span>.string }</span><br><span class="line">            <span class="type">DispatchQueue</span>.main.async {</span><br><span class="line">                recognizedText <span class="operator">=</span> recognizedStrings.joined(separator: <span class="string">"<span class="subst">\n</span>"</span>)</span><br><span class="line">                recognizedText <span class="operator">=</span> recognizedText.trimmingCharacters(in: <span class="type">CharacterSet</span>.newlines)</span><br><span class="line">            }</span><br><span class="line">        } <span class="keyword">else</span> <span class="keyword">if</span> <span class="keyword">let</span> error <span class="operator">=</span> error {</span><br><span class="line">            <span class="type">DispatchQueue</span>.main.async {</span><br><span class="line">                recognizedText <span class="operator">=</span> <span class="string">"Error: <span class="subst">\(error.localizedDescription)</span>"</span></span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">do</span> {</span><br><span class="line">        <span class="keyword">try</span> requestHandler.perform([request])</span><br><span class="line">    } <span class="keyword">catch</span> {</span><br><span class="line">        recognizedText <span class="operator">=</span> <span class="string">"Error: <span class="subst">\(error.localizedDescription)</span>"</span></span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3>
       </div>
       
         <div class="prev-or-next">
@@ -336,7 +338,7 @@ mjx-container[display="true"] + br {
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-              2024-09-01 14:12:50
+              2024-09-01 14:29:17
             </span>
             
                   <span class="post-categories">
@@ -388,7 +390,7 @@ mjx-container[display="true"] + br {
     <div class="title">Contents</div>
     <div class="catalog-content">
       
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E8%A8%80"><span class="toc-text">引言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%9D%E8%B7%AF"><span class="toc-text">思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B7%E4%BD%93%E5%AE%9E%E7%8E%B0"><span class="toc-text">具体实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%80%E9%9C%80%E7%9A%84%E6%A1%86%E6%9E%B6"><span class="toc-text">所需的框架</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ImagePicker%E8%8E%B7%E5%8F%96%E5%9B%BE%E5%83%8F"><span class="toc-text">ImagePicker获取图像</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E8%A8%80"><span class="toc-text">引言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%9D%E8%B7%AF"><span class="toc-text">思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B7%E4%BD%93%E5%AE%9E%E7%8E%B0"><span class="toc-text">具体实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%80%E9%9C%80%E7%9A%84%E6%A1%86%E6%9E%B6"><span class="toc-text">所需的框架</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ImagePicker%E8%8E%B7%E5%8F%96%E5%9B%BE%E5%83%8F"><span class="toc-text">ImagePicker获取图像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-text"></span></a></li></ol></li></ol>
       
     </div>
   </div>
