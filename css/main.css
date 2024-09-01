@@ -20,7 +20,8 @@
 
 .article-entry pre,
 .article-entry code {
-  font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace
+  font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
+  line-height: 1
 }
 
 .article-entry code {
