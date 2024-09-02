@@ -34,6 +34,16 @@
   padding: 0
 }
 
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 10px;
+  overflow: auto;
+  font-size: 90%;
+  line-height: 1.5;
+  background-color: var(--bg-block-md-pre);
+  border-radius: 5px;
+}
+
 .article-entry .highlight pre {
   border: none;
   margin: 0;
@@ -248,16 +258,6 @@ figure .pin-copy {
   top: 0;
   right: 1rem;
   cursor: pointer;
-}
-
-.markdown-body .highlight pre,
-.markdown-body pre {
-  padding: 10px;
-  overflow: auto;
-  font-size: 90%;
-  line-height: 1.5;
-  background-color: var(--bg-block-md-pre);
-  border-radius: 5px;
 }
 @font-face {
   font-family: octicons-link;
