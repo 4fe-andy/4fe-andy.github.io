@@ -34,16 +34,6 @@
   padding: 0
 }
 
-.markdown-body .highlight pre,
-.markdown-body pre {
-  padding: 10px;
-  overflow: auto;
-  font-size: 90%;
-  line-height: 1.5;
-  background-color: var(--bg-block-md-pre);
-  border-radius: 5px;
-}
-
 .article-entry .highlight pre {
   border: none;
   margin: 0;
@@ -227,7 +217,8 @@ pre .javascript .function {
   width: 100%;
   padding-left: 10px;
   padding-right: 10px;
-  background-color: #2d2d2d !important;
+  background-color: #2d2d2d !important; 
+  line-height: 1.5;
 }
 
 .markdown-body .highlight table tbody pre {
