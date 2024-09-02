@@ -197,13 +197,11 @@ pre .javascript .function {
   color: #ccc;
   background-color: #2d2d2d;
   border-radius: 5px;
-  line-height: 1.5;
 }
 
 .markdown-body .highlight table td {
   padding: 0;
   border: none;
-  line-height: 1.5;
 }
 
 .markdown-body .highlight table tr {
@@ -214,15 +212,6 @@ pre .javascript .function {
 .markdown-body .highlight .gutter pre {
   color: #999;
   background: #1b1b1b;
-  line-height: 1.5;
-}
-
-.highlight .code pre {
-  width: 100%;
-  padding-left: 10px;
-  padding-right: 10px;
-  background-color: #2d2d2d !important; 
-  line-height: 1.5;
 }
 
 .markdown-body .highlight table tbody pre {
