@@ -267,7 +267,7 @@ mjx-container[display="true"] + br {
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-          2024-09-01 22:36:39
+          2024-09-02 10:53:52
         </span>
         
               <span class="post-categories">
@@ -306,7 +306,7 @@ mjx-container[display="true"] + br {
           
       </div>
       <div class="markdown-body">
-        <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>在学习过程中，我发现自己特别喜欢在完成一道题目后，尤其是在真正理解了其中的知识逻辑之后，通过直接学习标准答案的方式来加深对考题的理解。我将这种方法视为课堂学习的一种有效补充，尤其在解释和描述题型上，这种方法能够帮助我迅速建立起答题的正确思路和用词习惯。这与深度学习中的计算机学习模式颇为相似——给定输入和输出，计算输出与正确答案之间的误差，然后通过反向传播更新模型，直至误差最小化。 </p>
+        <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>在学习过程中，我会在真正理解了其中的知识逻辑之后，通过直接学习标准答案的方式来加深对考题的理解。我将这种方法视为课堂学习的一种有效补充，尤其在解释和描述题型上，这种方法能够帮助我迅速建立起答题的正确思路和用词习惯。这与深度学习中的计算机学习模式颇为相似——给定输入和输出，计算输出与正确答案之间的误差，然后通过反向传播更新模型，直至误差最小化。如果不能及时和正确答案对比，大脑就无法形成有效的正反馈（反向传播）。</p>
 <p>然而，写完题目后再去网上寻找答案往往非常麻烦，有时甚至会忘记去查找。等到完成一整套试卷后，自己当时如何思考前面题目的过程也常常模糊不清，缺乏快速而清晰的正反馈来帮助自我修正。因此，我产生了一个想法：能否通过拍照来快速识别题目内容并检索到对应的答案？于是搭建这个项目的想法应运而生。</p>
 <h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>使用Apple提供的机器学习框架识别图片中的文字，然后使用 Sentence Embeddings 方法计算出和存储在JSON文件中的每一个题目的相似度，最后选择三道相似度最高的题目，输出题目相应的答案。</p>
 <h2 id="具体实现"><a href="#具体实现" class="headerlink" title="具体实现"></a>具体实现</h2><h3 id="所需的框架"><a href="#所需的框架" class="headerlink" title="所需的框架"></a>所需的框架</h3><figure class="highlight elm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> SwiftUI</span><br><span class="line"><span class="keyword">import</span> UIKit</span><br><span class="line"><span class="keyword">import</span> Vision</span><br><span class="line"><span class="keyword">import</span> NaturalLanguage</span><br></pre></td></tr></table></figure>
@@ -343,7 +343,7 @@ mjx-container[display="true"] + br {
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-              2024-09-01 22:36:39
+              2024-09-02 10:53:52
             </span>
             
                   <span class="post-categories">
