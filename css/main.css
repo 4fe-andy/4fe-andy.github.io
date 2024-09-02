@@ -14,7 +14,8 @@
 .article-entry .highlight .gutter pre,
 .article-entry .gist .gist-file .gist-data .line-numbers {
   color: #666;
-  font-size: .85em
+  font-size: .85em;
+  line-height: 1.5
 }
 
 .article-entry pre,
@@ -42,7 +43,8 @@
 
 .article-entry .highlight table {
   margin: 0;
-  width: auto
+  width: auto;
+  line-height: 1.5 
 }
 
 .article-entry .highlight td {
@@ -67,7 +69,8 @@
 }
 
 .article-entry .highlight .line {
-  height: auto
+  height: auto;
+  line-height: 1.5 
 }
 
 .article-entry .highlight .line.marked {
