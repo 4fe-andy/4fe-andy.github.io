@@ -673,7 +673,7 @@
 .markdown-body pre {
   padding: 10px;
   overflow: auto;
-  font-size: 90%;
+  font-size: 85%;
   line-height: 1.4;
   background-color: var(--bg-block-md-pre);
   border-radius: 5px;
