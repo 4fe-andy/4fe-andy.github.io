@@ -218,6 +218,12 @@ pre .javascript .function {
   padding-left: 10px;
   padding-right: 10px;
   background-color: #2d2d2d !important;
+  line-height: 1.5;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  line-height: 1.5;
 }
 
 .markdown-body .highlight table tbody pre {
