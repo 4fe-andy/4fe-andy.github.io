@@ -8,7 +8,7 @@
   border-width: 1px 0;
   overflow: auto;
   color: #ccc;
-  line-height: 22px 
+  line-height: 1.5 
 }
 
 .article-entry .highlight .gutter pre,
@@ -67,7 +67,7 @@
 }
 
 .article-entry .highlight .line {
-  height: 22.400000000000002px
+  height: auto
 }
 
 .article-entry .highlight .line.marked {
